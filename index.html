@@ -534,6 +534,17 @@
                 grid-template-columns: 1fr;
             }
         }
+        .logo-image {
+    height: 40px;
+    width: auto;
+    max-width: 120px;
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 30px;
+    }
+}
     </style>
 </head>
 <body>
@@ -541,7 +552,7 @@
 <div class="particles"></div>
     <header>
         <div class="container nav">
-            <div class="logo">OmniAI Agent</div>
+            <div class="logo"><img src="/logo.png?height=40&width=120" alt="IBRL Agent Logo" class="logo-image">OmniAI Agent</div>
             <nav>
                 <a href="#" class="trading-button">Get Started</a>
             </nav>
