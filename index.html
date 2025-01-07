@@ -570,8 +570,8 @@
                     <div class="token-info">
                         <span>Contract:</span>
                         <div>
-                            <span class="token-value">7wxyV4l7...WjN3vM</span>
-                            <span class="copy-icon">📋</span>
+                            <span class="token-value" id="token">____________________</span>
+                            <span class="copy-icon" onclick="copyToken()">📋</span>
                         </div>
                     </div>
                 </div>
@@ -722,6 +722,21 @@
 </body>
 <script>
     // Create particles
+
+    function copyToken() {
+        // Get the text inside the span
+        const token = document.getElementById("token").textContent;
+
+        // Use the Clipboard API to copy it to the clipboard
+        navigator.clipboard.writeText(token)
+            .then(() => {
+                alert("Token copied successfully!");
+            })
+            .catch(err => {
+                alert("Failed to copy token.");
+                console.error(err);
+            });
+    }
     function createParticles() {
         const particles = document.querySelector('.particles');
         const particleCount = 50;
